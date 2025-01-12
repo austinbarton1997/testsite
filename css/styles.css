@@ -1,105 +1,123 @@
 /* Base reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Page background - soft gradient reminiscent of Apple style */
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: linear-gradient(135deg, #f2f2f2 0%, #e6e6e6 100%);
-    color: #1c1c1c;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Container box */
-  .converter-container {
-    background-color: #fff;
-    width: 90%;
-    max-width: 500px;
-    padding: 2rem;
-    border-radius: 1.2rem;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  }
-  
-  .converter-container h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1.2rem;
-    text-align: center;
-  }
-  
-  .converter-container p {
-    font-size: 1rem;
-    margin-bottom: 1.6rem;
-    text-align: center;
-    color: #555;
-  }
-  
-  /* Input styling */
-  .input-group {
-    display: flex;
-    margin-bottom: 1.2rem;
-  }
-  
-  .input-group input {
-    flex: 1;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-right: none;
-    border-radius: 0.5rem 0 0 0.5rem;
-    outline: none;
-  }
-  
-  .input-group button {
-    background-color: #0071e3; /* Apple's iconic "Link Blue" vibe */
-    border: none;
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 0 0.5rem 0.5rem 0;
-    transition: background-color 0.3s;
-  }
-  
-  .input-group button:hover {
-    background-color: #005bb5;
-  }
-  
-  /* Output styling */
-  #convertedUrl {
-    display: block;
-    margin-top: 1.5rem;
-    padding: 0.8rem;
-    background-color: #f9f9f9;
-    font-size: 0.95rem;
-    border: 1px solid #eaeaea;
-    border-radius: 0.5rem;
-    color: #333;
-    word-break: break-all;
-  }
-  
-  /* Subtle Apple-themed footer */
-  footer {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #999;
-  }
-  
-  footer a {
-    color: #0071e3;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background - soft gradient reminiscent of Apple style */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #f2f2f2 0%, #e6e6e6 100%);
+  color: #1c1c1c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container box */
+.converter-container {
+  background-color: #fff;
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.converter-container h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.converter-container p {
+  font-size: 1rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+  color: #555;
+}
+
+/* Input styling */
+.input-group {
+  display: flex;
+  margin-bottom: 1.2rem;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none;
+}
+
+.input-group button {
+  background-color: #0071e3; /* Apple's iconic "Link Blue" vibe */
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 0.5rem 0.5rem 0;
+  transition: background-color 0.3s;
+}
+
+.input-group button:hover {
+  background-color: #005bb5;
+}
+
+/* Output styling */
+#convertedUrl {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background-color: #f9f9f9;
+  font-size: 0.95rem;
+  border: 1px solid #eaeaea;
+  border-radius: 0.5rem;
+  color: #333;
+  word-break: break-all;
+}
+
+/* Copy button styling */
+.copy-btn {
+  display: none; /* Hidden by default; shown once URL is converted */
+  margin-top: 1rem;
+  background-color: #f2f2f2;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+  background-color: #e1e1e1;
+}
+
+/* Subtle Apple-themed footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+footer a {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
