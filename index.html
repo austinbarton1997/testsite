@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apple-Themed TikTok URL Converter</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="converter-container">
+    <h1>TikTok URL Converter</h1>
+    <p>Remove query parameters from your TikTok video URL.</p>
+
+    <div class="input-group">
+      <input
+        type="text"
+        id="tiktokUrl"
+        placeholder="Paste your TikTok URL here..."
+      />
+      <button onclick="convertUrl()">Convert</button>
+    </div>
+
+    <span id="convertedUrl"></span>
+  </div>
+
+  <footer>
+    Made with <span style="color: #e74c3c;">♥</span> in an Apple-inspired theme. 
+    <br/>
+    <a href="#">GitHub</a> | <a href="#">Contact</a>
+  </footer>
+
+  <!-- Link to external JS -->
+  <script src="./script/script.js"></script>
+</body>
+</html>
