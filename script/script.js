@@ -36,4 +36,3 @@ function copyUrl() {
       console.error(err);
     });
 }
-//
